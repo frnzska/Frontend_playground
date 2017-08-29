@@ -1,2 +1,6 @@
 import { map } from 'lodash';
-console.log(map([1,2,3,4,5,6], n => n*n));
+var template = require("./list_template.hbs");
+
+let numbers = map([1,2,3,4,5], n => n*n);
+
+console.log(template({numbers}));
