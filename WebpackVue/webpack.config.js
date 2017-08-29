@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    entry: './src/main.js',
+    entry: ['babel-polyfill', './src/main.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -14,8 +14,12 @@ module.exports = {
             options: {
                 plugins: ['transform-runtime'],
                 presets: ['es2015']
-        }
-    },
+                }
+            },
+            {
+            test: /\.hbs$/,
+            loader: 'handlebars-loader'
+            }
 
         ]
     }
