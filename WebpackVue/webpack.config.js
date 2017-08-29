@@ -1,3 +1,6 @@
+var HtmlwebpackPlugin = require('html-webpack-plugin');
+var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+
 const path = require('path');
 module.exports = {
     entry: ['babel-polyfill', './src/main.js'],
@@ -22,5 +25,10 @@ module.exports = {
             }
 
         ]
-    }
+    },
+    plugins: [
+        new HtmlwebpackPlugin({
+            template: 'src/index.html'
+        })
+    ]
 };
