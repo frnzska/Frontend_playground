@@ -30,6 +30,10 @@ module.exports = {
         new HtmlwebpackPlugin({
             template: 'src/index.html'
         }),
+        new HtmlwebpackPlugin({
+            template: 'src/vue_examples/example0.html',
+            filename: 'vue_examples/example0.html'
+        }),
         new UglifyJsPlugin({
             beautify: false,
             mangle: { screw_ie8 : true },
