@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+ <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <div id="examplebinding">
+        <input type="text" id="input" v-model="mymsg">
+        <p> {{mymsg}}</p>
+    </div>
+
+    <script>
+        console.log('here');
+
+        new Vue({
+            el: "#examplebinding",
+            data: {mymsg: 'Example Text'}
+        })
+    </script>
+<script type="text/javascript" src="../bundle.js"></script></body>
+</html>
